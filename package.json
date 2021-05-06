@@ -1,0 +1,24 @@
+{
+  "name": "ssbot",
+  "version": "1.0.0",
+  "description": "My Discord Bot",
+  "main": "bot.js",
+  "scripts": {
+    "start:local": "nodemon -r dotenv/config bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kakadlec/ssbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kakadlec/ssbot/issues"
+  },
+  "homepage": "https://github.com/kakadlec/ssbot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^9.0.0"
+  }
+}
