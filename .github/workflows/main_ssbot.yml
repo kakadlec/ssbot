@@ -52,5 +52,5 @@ jobs:
       with:
         app-name: 'ssbot'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_cb5b0e97cde54155a7f7d2d01f69d92e }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_ab9c6b5b444d4e898a2fc2b598c1bdd4 }}
         package: .
