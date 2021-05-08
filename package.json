@@ -2,9 +2,9 @@
   "name": "ssbot",
   "version": "1.0.0",
   "description": "My Discord Bot",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
-    "start:local": "nodemon -r dotenv/config bot.js"
+    "start:local": "nodemon -r dotenv/config index.js"
   },
   "repository": {
     "type": "git",
