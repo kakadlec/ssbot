@@ -13,7 +13,7 @@ bot.on('message', async msg => {
   if (msg.content.startsWith('!ola')) {
     return msg.reply('Seja bem vindo!!')
   }
-  if (msg.content === 'ping') {
+  if (msg.content === '!ping') {
     msg.channel.send('pong')
   }
   if (msg.content === '!git') {
