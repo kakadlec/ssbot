@@ -1,18 +1,24 @@
 {
   "name": "ssbot",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node server.js",
-    "start:local": "nodemon -r dotenv/config server.js"
+    "start": "node src/server.js",
+    "start:local": "nodemon -r dotenv/config src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.3",
-    "fastify": "^3.15.1"
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "cors": "^2.8.5",
+    "body-parser": "^1.19.0",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.5",
+    "fast-glob": "^3.2.5"
   },
   "devDependencies": {
     "dotenv": "^9.0.0"
