@@ -16,7 +16,9 @@ bot.on('message', async msg => {
   if (msg.content === '!ping') {
     msg.channel.send('pong')
   }
-  if (msg.content === '!git') {
+  if (msg.content.startsWith('!git')) {
+    var command = msg.content.substring(msg.content.length - 5)
+    msg.channel.send('Command: ' + command)
     msg.reply('Contribua! -> https://github.com/kakadlec/ssbot')
   }
 })
