@@ -21,6 +21,10 @@
     "fast-glob": "^3.2.5"
   },
   "devDependencies": {
-    "dotenv": "^9.0.0"
+    "dotenv": "^9.0.0",
+    "git-commit-msg-linter": "^3.1.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "standard": "^16.0.3"
   }
 }
