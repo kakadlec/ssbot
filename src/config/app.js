@@ -1,7 +1,7 @@
 const app = require('express')()
 const setupMiddlewares = require('./middlewares')
 const setupRoutes = require('./routes')
-require('../services/bot')
+require('../../bot')
 
 setupMiddlewares(app)
 setupRoutes(app)
