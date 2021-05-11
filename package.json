@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
+    "release": "standard-version",
     "start": "node src/server.js",
     "start:local": "nodemon -r dotenv/config src/server.js"
   },
