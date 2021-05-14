@@ -5,11 +5,11 @@ module.exports = {
   cooldown: 5,
   description: 'Hubble!',
   execute(message, args) {
-    message(message, args)
+    text(message, args)
   },
 }
 
-const message = async (message, args) => {
+const text = async (message, args) => {
   const res = await axios.get(url).catch(() => {
     return {data: 'Erro ao Comunicar com o Hubble'}
   })

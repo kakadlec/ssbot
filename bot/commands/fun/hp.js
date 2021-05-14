@@ -4,7 +4,7 @@ const url = 'https://ajith-messages.p.rapidapi.com/getMsgs%22?category=birthday'
 module.exports = {
   name: 'hp',
   cooldown: 5,
-  description: 'Ping!',
+  description: 'hp!',
   args: true,
   execute(message, args) {
     test(message, args)
