@@ -17,16 +17,16 @@
     "cors": "^2.8.5",
     "discord.js": "^12.5.3",
     "express": "^4.17.1",
-    "fast-glob": "^3.2.5",
+    "fast-glob": "^3.2.7",
     "helmet": "^4.6.0",
     "winston": "^3.3.3",
     "winston-daily-rotate-file": "^4.5.5"
   },
   "devDependencies": {
-    "dotenv": "^9.0.0",
-    "git-commit-msg-linter": "^3.1.0",
-    "husky": "^6.0.0",
-    "lint-staged": "^11.0.0",
+    "dotenv": "^10.0.0",
+    "git-commit-msg-linter": "^3.2.6",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.1",
     "standard": "^16.0.3"
   }
 }
