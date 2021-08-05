@@ -2,7 +2,7 @@ const fs = require('fs')
 const Discord = require('discord.js')
 
 const BOT_TOKEN = process.env.BOT_TOKEN
-const PREFIX = process.env.PREFIX
+const PREFIX = process.env.PREFIX.split(' ')
 
 const client = new Discord.Client()
 client.commands = new Discord.Collection()
@@ -23,11 +23,20 @@ client.on('ready', (evt) => {
 })
 
 client.on('message', async message => {
-  if (!message.content.startsWith(PREFIX) || message.author.bot) return
+  const messagePrefix = PREFIX.find(pre => message.content.startsWith(pre))
+  if (!messagePrefix || message.author.bot) return
 
-  const args = message.content.slice(PREFIX.length).trim().split(/ +/)
-  const commandName = args.shift().toLowerCase()
-
+  let args
+  let commandName
+  if (messagePrefix === '#') {
+    args = message.content.slice(messagePrefix.length).trim().split(/ +/)
+    if (args.every(element => typeof parseInt(element) === 'number')) {
+      commandName = 'milvus'
+    } else { return message.channel.send('Informe os chamados separados por número!') }
+  } else {
+    args = message.content.slice(messagePrefix.length).trim().split(/ +/)
+    commandName = args.shift().toLowerCase()
+  }
   if (!client.commands.has(commandName)) return
 
   const command = client.commands.get(commandName)
