@@ -5,6 +5,7 @@ module.exports = {
   name: 'milvus',
   cooldown: 5,
   description: 'Consulta chamado!',
+  args: true,
   execute (message, args) {
     text(message, args)
   }
