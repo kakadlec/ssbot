@@ -24,6 +24,9 @@ const text = async (message, args) => {
   }).catch(() => {
     return { data: 'Erro ao Comunicar com o Hubble' }
   })
-
-  message.channel.send(`Ei chapa! Toma uma ajudinha aí: https://portal.milvus.com.br/#/help-desk/chamado/${res.data.lista[0].id}`)
+  let msg = `Ei chapa! Toma uma ajudinha aí: https://portal.milvus.com.br/#/help-desk/chamado/${res.data.lista[0].id}`
+  msg += `\nAssunto: **${res.data.lista[0].assunto}**.`
+  msg += `\nMesa: **${res.data.lista[0].mesa_trabalho}**.`
+  msg += `\nSLA: **${res.data.lista[0].sla.status_sla_solucao}**.` 
+  message.channel.send(msg)
 }
